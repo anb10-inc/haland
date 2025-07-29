@@ -24,12 +24,14 @@ export default function Component() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white sticky top-0 z-50">
-        <Link href="/" className="flex items-center justify-center">
-          <Building2 className="h-8 w-8 text-blue-600" />
-          <span className="ml-2 text-xl font-bold text-gray-900">建築プロ</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
+      <header className="px-4 lg:px-6 h-16 flex items-center justify-between border-b bg-white sticky top-0 z-50 w-full">
+        <div className="flex items-center justify-center">
+          <Link href="/" className="flex items-center justify-center">
+            <Building2 className="h-8 w-8 text-blue-600" />
+            <span className="ml-2 text-xl font-bold text-gray-900">Haland</span>
+          </Link>
+        </div>
+        <nav className="flex gap-4 sm:gap-6">
           <Link href="#services" className="text-sm font-medium hover:text-blue-600 transition-colors">
             サービス
           </Link>
@@ -43,12 +45,13 @@ export default function Component() {
             お問い合わせ
           </Link>
         </nav>
+        <div className="w-[120px]"></div> {/* 右側のスペーサー */}
       </header>
 
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-blue-50 to-gray-50">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
@@ -99,7 +102,7 @@ export default function Component() {
 
         {/* Services Section */}
         <section id="services" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6 max-w-6xl">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900">サービス内容</h2>
@@ -186,7 +189,7 @@ export default function Component() {
 
         {/* Works Section */}
         <section id="works" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6 max-w-6xl">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900">施工事例</h2>
@@ -198,7 +201,7 @@ export default function Component() {
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="grid gap-4">
                 <Image
-                  src="/placeholder.svg?height=300&width=500"
+                  src="/img_0_2.jpg?height=300&width=500"
                   width="500"
                   height="300"
                   alt="モダン住宅の外観"
@@ -218,7 +221,7 @@ export default function Component() {
               </div>
               <div className="grid gap-4">
                 <Image
-                  src="/placeholder.svg?height=300&width=500"
+                  src="/img_1_2.jpg?height=300&width=500"
                   width="500"
                   height="300"
                   alt="リノベーション後の室内"
@@ -242,7 +245,7 @@ export default function Component() {
 
         {/* About Section */}
         <section id="about" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
@@ -296,7 +299,7 @@ export default function Component() {
 
         {/* Testimonials Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6 max-w-6xl">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900">お客様の声</h2>
@@ -365,7 +368,7 @@ export default function Component() {
 
         {/* Contact Section */}
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6 max-w-6xl">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900">お問い合わせ</h2>
@@ -475,10 +478,10 @@ export default function Component() {
       </main>
 
       {/* Footer */}
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-gray-50">
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-gray-50 max-w-7xl mx-auto">
         <div className="flex items-center gap-2">
           <Building2 className="h-6 w-6 text-blue-600" />
-          <p className="text-sm text-gray-600">© 2024 建築プロ. All rights reserved.</p>
+          <p className="text-sm text-gray-600">© 2025 Haland. All rights reserved.</p>
         </div>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600">
